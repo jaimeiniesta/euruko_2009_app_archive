@@ -28,7 +28,7 @@ class NanocMirror
       end
       
       doc = Nokogiri::HTML(open(url))
-      title = doc.css('title').inner_html rescue "EuRuKo 2009"
+      title = doc.css('title').inner_html
       html = doc.css("##{@extract_id}").inner_html
       
       contents = "---\n"
